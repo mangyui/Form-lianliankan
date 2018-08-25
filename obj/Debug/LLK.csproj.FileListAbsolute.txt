@@ -73,3 +73,13 @@ G:\2018—C#\连连看\LLK\WindowsFormsApplication2\obj\Debug\WindowsFormsApplic
 G:\GitGithub\From-lianliankan\bin\Debug\WindowsFormsApplication2.exe.config
 G:\GitGithub\From-lianliankan\obj\Debug\WindowsFormsApplication2.exe
 G:\GitGithub\From-lianliankan\obj\Debug\WindowsFormsApplication2.pdb
+G:\GitGithub\Form-lianliankan\bin\Debug\WindowsFormsApplication2.exe.config
+G:\GitGithub\Form-lianliankan\obj\Debug\WindowsFormsApplication2.exe
+G:\GitGithub\Form-lianliankan\obj\Debug\WindowsFormsApplication2.pdb
+G:\GitGithub\Form-lianliankan\bin\Debug\WindowsFormsApplication2.exe
+G:\GitGithub\Form-lianliankan\bin\Debug\WindowsFormsApplication2.pdb
+G:\GitGithub\Form-lianliankan\obj\Debug\LLK.csprojResolveAssemblyReference.cache
+G:\GitGithub\Form-lianliankan\obj\Debug\LLK.Form1.resources
+G:\GitGithub\Form-lianliankan\obj\Debug\LLK.Images.resources
+G:\GitGithub\Form-lianliankan\obj\Debug\LLK.Properties.Resources.resources
+G:\GitGithub\Form-lianliankan\obj\Debug\LLK.csproj.GenerateResource.Cache

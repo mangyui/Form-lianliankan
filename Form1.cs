@@ -92,7 +92,7 @@ namespace LLK
                 t1 = new Thread(new ThreadStart(SS1));
             }
             t1.Start();
-
+            button3_Click(sender,e);
 
         }
         private void PainMap(Graphics g)             //图
@@ -183,7 +183,7 @@ namespace LLK
 
             if (isstart == true)
             {
-                button3.Text = "继  续";
+                button3.Text = "开  始";
                 isstart = false;
                 ChangState("暂停");
                 t1.Suspend();

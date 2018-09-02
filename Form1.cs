@@ -25,8 +25,8 @@ namespace LLK
         Assembly assembly;
         ResourceManager rmManager;
         private static int score = 0;    //设置分数;
-        private int xx = 101;            //设置时间
-        bool isstart = true;             //设置状态（游戏暂停/运行）
+        private int xx = 100;            //设置时间
+        bool isstart = false;             //设置状态（游戏暂停/运行）
         private static int san;          //求助次数
 
         //设置线程
@@ -91,8 +91,9 @@ namespace LLK
             {
                 t1 = new Thread(new ThreadStart(SS1));
             }
-            t1.Start();
-            button3_Click(sender,e);
+         //   Console.WriteLine(t1.ThreadState);
+           // t1.Start();
+         //   button3_Click(sender,e);
 
         }
         private void PainMap(Graphics g)             //图
@@ -154,46 +155,49 @@ namespace LLK
             score = 0;
             xx = 100;
             san = 3;
-            button3.Text = "暂  停";
+            button3.Text = "开  始";
             ChangSan();
             ChangTextBox();
             ChangTextBox2();
             ChangState("运行");
-            isstart = true;
-
+            isstart = false;
 
             //MessageBox.Show(t1.ThreadState.ToString());
-            //线程停止
-            if (t1.ThreadState == ThreadState.Stopped||t1.ThreadState == ThreadState.Aborted)
+            //线程重启
+            if (t1.ThreadState == ThreadState.Aborted || t1.ThreadState == ThreadState.Stopped)
             {
                 t1 = new Thread(new ThreadStart(SS1));
                 t1.Start();
             }
-            //线程挂起
-            if (t1.ThreadState == ThreadState.Suspended)
-                t1.Resume();
-
+            //挂起线程
+            if (t1.ThreadState != ThreadState.Suspended)
+            {
+                t1.Suspend();
+            }
 
         }
-        private void button3_Click(object sender, EventArgs e)            //暂停/继续
+        private void button3_Click(object sender, EventArgs e)            //开始/暂停/继续
         {
 
             if (t1 == null || xx <= 0)  //时间耗尽 无法操作
                 return;
 
-            if (isstart == true)
+            if (isstart == true)    //游戏当前为运行状态
             {
-                button3.Text = "开  始";
+                button3.Text = "继  续";
                 isstart = false;
                 ChangState("暂停");
                 t1.Suspend();
             }
-            else
+            else                  //游戏当前不在运行状态（未开始/暂停）
             {
                 button3.Text = "暂  停";
                 ChangState("运行");
                 isstart = true;
-                t1.Resume();
+                if (t1.ThreadState == ThreadState.Unstarted)           //游戏刚开始
+                    t1.Start();
+                else
+                    t1.Resume();
             }
         }
         private void button4_Click(object sender, EventArgs e)   //求助

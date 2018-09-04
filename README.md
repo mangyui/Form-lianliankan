@@ -10,7 +10,7 @@ Form-lianliankan
 ------
 >* C#
 
->* From窗体程序应用
+>* Form窗体程序应用
 
 >* 多线程
 
@@ -18,7 +18,7 @@ Form-lianliankan
 附件
 -----
 
-可直接[**下载程序**](https://coding.net/api/share/download/4abe9cde-7af6-4537-b7a1-cac89c9aaf51)试玩
+可直接[**下载程序**](https://coding.net/api/share/download/bb77ac63-490c-4e0f-a643-be9b260c8b62)试玩
 
 
 
